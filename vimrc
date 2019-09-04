@@ -21,7 +21,7 @@ set smartindent
 set autoindent
 
 set hlsearch "highlight found words
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR> "cancel search with Esc
+"nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR> "cancel search with Esc
 
 set showmatch "show matching parenthesis
 
@@ -32,5 +32,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader><leader> :e#<CR>
 
 "==================== PLUG-INs  ==ncel search with Esc==================
-
-
+execute pathogen#infect()
+map <C-n> :NERDTreeToggle<CR> 
+set laststatus=2 "to make lightline work
+filetype plugin on "to make nerdcommenter work
