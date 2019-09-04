@@ -4,4 +4,5 @@
  * make symlink to .vimrc:
  * * ln -s ~/.vim/vimrc ~/.vimrc
 
-## vim configuration
+## Adding Plugins
+ * git submodel add <url> ~/.vim/bundle/<plugin name>
