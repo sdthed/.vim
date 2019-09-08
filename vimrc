@@ -2,11 +2,11 @@
 filetype on
 syntax on
 colorscheme cryslominsa
-"colorscheme poolside
 
-set lines=150 columns=100
-set colorcolumn=78
+"set lines=150 columns=100
+"set colorcolumn=78
 set number
+set background=dark "to fix tmux colorscheme
 
 "==================== SMART DEFAULTS ===============
 set hidden
@@ -20,6 +20,9 @@ set expandtab
 set smartindent
 set autoindent
 
+set splitright
+set splitbelow
+
 set hlsearch "highlight found words
 "nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR> "cancel search with Esc
 
@@ -30,9 +33,17 @@ let mapleader=" "
 nnoremap <leader>s :source ~/.vimrc<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader><leader> :e#<CR>
+nnoremap <leader>html :r ~/.vim/templates/template.html<CR> gg
+nnoremap <leader>flask :r ~/.vim/templates/flask_template.py<CR> gg
 
-"==================== PLUG-INs  ==ncel search with Esc==================
+"==================== PLUG-INs =====================
 execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR> 
 set laststatus=2 "to make lightline work
 filetype plugin on "to make nerdcommenter work
+
+"==================== REMAPPINGS ====================
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
